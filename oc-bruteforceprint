@@ -1,0 +1,21 @@
+import string, time
+
+letters = string.ascii_letters
+uppercaseLetters = string.ascii_uppercase
+
+wordToPrint = input("Enter a word to print: ")
+word = []
+placeHolder = []
+
+for i in range(len(wordToPrint)):
+    placeHolder.append(letters[i])
+
+while ''.join(placeHolder) != wordToPrint:
+    for letter in letters:
+        for index, character in enumerate(wordToPrint):
+            if ''.join(placeHolder) == wordToPrint:
+                break
+            else:
+                if letter == character:
+                    placeHolder[index] = letter
+                    print(''.join(placeHolder))
